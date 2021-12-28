@@ -1,0 +1,11 @@
+#!/bin/bash
+
+sudo bash -c "mknod /dev/csemad_push_switch c 265 0"
+sudo bash -c "mknod /dev/csemad_dot_matrix c 262 0"
+sudo bash -c "mknod /dev/csemad_led c 260 0"
+sudo bash -c "mknod /dev/csemad_sseg c 261 0"
+
+sudo bash -c "insmod push_switch_driver.ko"
+sudo bash -c "insmod dot_matrix_driver.ko"
+sudo bash -c "insmod led_driver.ko"
+sudo bash -c "insmod sseg_driver.ko"
